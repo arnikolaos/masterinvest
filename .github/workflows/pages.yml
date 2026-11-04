@@ -30,7 +30,7 @@ jobs:
           name: masterinvest-quality-evidence
           path: evidence/
   build:
-    if: vars.RELEASE_APPROVED == 'true'
+    if: vars.PUBLISH_SITE == 'true'
     needs: quality
     runs-on: ubuntu-latest
     steps:
@@ -44,15 +44,17 @@ jobs:
         with:
           name: masterinvest-quality-evidence
           path: evidence/
-      - run: npm run build && npm run release:check
+      - run: npm run build
         env:
-          RELEASE_APPROVED: 'true'
-          PUBLIC_EMAILJS_ENABLED: 'true'
+          RELEASE_APPROVED: ${{ vars.RELEASE_APPROVED || 'false' }}
+          PUBLIC_EMAILJS_ENABLED: ${{ vars.PUBLIC_EMAILJS_ENABLED || 'false' }}
           PUBLIC_EMAILJS_SERVICE_ID: ${{ vars.PUBLIC_EMAILJS_SERVICE_ID }}
           PUBLIC_EMAILJS_PUBLIC_KEY: ${{ vars.PUBLIC_EMAILJS_PUBLIC_KEY }}
           PUBLIC_EMAILJS_NOTIFICATION_TEMPLATE: ${{ vars.PUBLIC_EMAILJS_NOTIFICATION_TEMPLATE }}
           PUBLIC_EMAILJS_AUTOREPLY_TEMPLATE: ${{ vars.PUBLIC_EMAILJS_AUTOREPLY_TEMPLATE }}
           SITE_ORIGIN: https://masterinvest.gr
+      - run: npm run release:check
+        if: vars.RELEASE_APPROVED == 'true'
       - uses: actions/configure-pages@v5
       - uses: actions/upload-pages-artifact@v4
         with:
