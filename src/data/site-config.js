@@ -4,6 +4,7 @@ export const site = {
   address: {en: '3 Gladstonos Str., 106 77 Athens, Greece', el: 'Γλάδστωνος 3, 106 77 Αθήνα, Ελλάδα'},
   credit: 'Designed & Developed by Nikolaos Arvanitis.',
   modules: ['hero','philosophy','expertise','destinations','ventures','lifecycle','team','partnerships','contact'],
+  seo: { indexable: true },
   // Set only after the owner has actually reviewed the specified material.
   launch: { factualAndPermissionsReviewed: false, privacyReviewed: false, emailDeliveryVerified: false },
 };

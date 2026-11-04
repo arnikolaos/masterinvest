@@ -6,3 +6,32 @@ html[lang=el] .hero-kicker{letter-spacing:.04em}html[lang=el] .contact-title{fon
 @media(max-width:360px){.header-tools{gap:14px}.destination-grid{grid-template-columns:1fr}.destination-card:nth-child(even){margin-top:0}.destination-image{aspect-ratio:1.25}.contact-email{font-size:16px}.hero-controls{max-width:140px}}
 
 .site-header.is-scrolled{background:#111f;border-bottom-color:#43433f;box-shadow:0 4px 20px #0001}
+/* Requested cinematic treatment: existing photographs, unchanged layout. */
+.hero-media>picture{overflow:hidden;background:#000}
+.hero-media>picture img{animation:camera-travel 25s infinite;animation-play-state:paused;transform-origin:50% 50%;will-change:transform;--camera-zoom:1.25;--camera-pan:-4%}
+.hero-video{display:none}
+.hero.camera-running .hero-media>picture img{animation-play-state:running}
+.hero-media>picture::after,.film-camera::after{content:'';position:absolute;inset:0;background:#000;opacity:0;pointer-events:none}
+.hero.camera-started .hero-media>picture::after,.film-started::after{animation:camera-fade 2s ease-out both}
+/* Fade occurs once on entry. Repeating it would flash black at the loop seam. */
+@keyframes camera-fade{from{opacity:1}to{opacity:0}}
+@keyframes camera-travel{0%,20%{transform:translate3d(0,0,0) scale(1);animation-timing-function:cubic-bezier(.45,0,.25,1)}52%,72%{transform:translate3d(var(--camera-pan),0,0) scale(var(--camera-zoom));animation-timing-function:cubic-bezier(.45,0,.25,1)}84%,100%{transform:translate3d(0,0,0) scale(1)}}
+.hero-media::after,.film-camera::before{content:'';position:absolute;inset:-5%;background:url('../icons/film-grain.svg') repeat;opacity:.055;pointer-events:none;animation:grain-drift 1s steps(4,end) infinite;animation-play-state:paused}
+.hero.camera-running .hero-media::after,.film-running::before{animation-play-state:running}
+@keyframes grain-drift{0%,100%{transform:translate3d(0,0,0)}25%{transform:translate3d(1%,-1%,0)}50%{transform:translate3d(-1%,1%,0)}75%{transform:translate3d(1%,1%,0)}}
+.reveal-ready{transition:opacity 650ms cubic-bezier(.22,1,.36,1),transform 650ms cubic-bezier(.22,1,.36,1);filter:none!important}
+.reveal-ready:not(.revealed){opacity:0;transform:translate3d(24px,-18px,0)}
+.reveal-ready.revealed{opacity:1;transform:none}
+.floating-contact{opacity:.75;transition:opacity 350ms;animation:contact-enter 800ms ease-out}
+.floating-contact:hover,.floating-contact:focus-visible{opacity:1}
+.floating-contact.is-hidden{opacity:0}
+@keyframes contact-enter{from{opacity:0}to{opacity:.75}}
+.film-camera{position:relative;overflow:hidden;isolation:isolate;background:#000;aspect-ratio:16/9;max-height:73svh;margin:auto}
+.dialog-content .film-photo{width:100%;height:100%;object-fit:cover;max-height:none;--camera-zoom:1.4;--camera-pan:-7%;animation:camera-travel 25s infinite paused;will-change:transform}
+.dialog-content .film-clock{position:absolute;inset:0;width:100%;height:100%;max-height:none;object-fit:none;object-position:100000px 100000px;background:transparent;z-index:3}
+.film-camera::before{z-index:1}.film-camera::after{z-index:2}
+.motion-paused .hero-media>picture img{animation-play-state:paused;transform:none}
+.motion-paused .hero-media::after,.motion-paused .film-camera::before{animation-play-state:paused}
+@media(max-width:760px){.hero-media>picture img{transform-origin:58% 50%;--camera-pan:-3%}.dialog-content .film-photo{--camera-pan:-5%}}
+@media(prefers-reduced-motion:reduce){.hero-media>picture img,.dialog-content .film-photo{animation:none!important;transform:none!important}.hero-media::after,.film-camera::before{animation:none!important}.hero-media>picture::after,.film-camera::after{animation:none!important;opacity:0!important}}
+.film-camera:fullscreen{width:100vw;height:100vh;max-height:none;aspect-ratio:auto}.film-clock:fullscreen{object-position:center}

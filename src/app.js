@@ -1,5 +1,6 @@
 import {initContact} from './lib/contact-form.js';
 import {initMotion} from './motion/index.js';
+import {cinematicFilm} from './motion/film.js';
 const locale=document.documentElement.lang;
 const {t,emailConfig}=await import('./config-'+locale+'.js');
 initContact({emailConfig,locale,t});initMotion(t);
@@ -23,7 +24,7 @@ const floating=document.querySelector('.floating-contact'),contact=document.quer
 if(floating&&contact)new IntersectionObserver(([entry])=>{floating.classList.toggle('is-hidden',entry.isIntersecting);floating.tabIndex=entry.isIntersecting?-1:0;}).observe(contact);
 const dialog=document.querySelector('.media-dialog');
 if(dialog){const content=dialog.querySelector('.dialog-content'),caption=dialog.querySelector('#media-caption');let trigger;
- document.querySelectorAll('[data-viewer]').forEach(link=>link.addEventListener('click',event=>{event.preventDefault();trigger=link;const isVideo=link.dataset.mediaType==='video';const media=document.createElement(isVideo?'video':'img');media.src=link.href;if(isVideo){media.controls=true;media.playsInline=true;media.preload='metadata';media.poster=link.dataset.poster||'';}else{media.alt=link.dataset.caption;}content.replaceChildren(media);caption.textContent=link.dataset.caption;dialog.showModal();}));
+ document.querySelectorAll('[data-viewer]').forEach(link=>link.addEventListener('click',event=>{event.preventDefault();trigger=link;const isVideo=link.dataset.mediaType==='video';const media=document.createElement(isVideo?'video':'img');media.src=link.href;if(isVideo){media.controls=true;media.playsInline=true;media.preload='metadata';media.poster=link.dataset.poster||'';}else{media.alt=link.dataset.caption;}content.replaceChildren(isVideo?cinematicFilm(media,link.dataset.caption):media);caption.textContent=link.dataset.caption;dialog.showModal();}));
  const close=()=>dialog.close();dialog.querySelector('.dialog-close').addEventListener('click',close);dialog.addEventListener('click',event=>{if(event.target===dialog){const r=dialog.getBoundingClientRect();if(event.clientX<r.left||event.clientX>r.right||event.clientY<r.top||event.clientY>r.bottom)close();}});
- dialog.addEventListener('close',()=>{content.querySelector('video')?.pause();content.replaceChildren();trigger?.focus();});
+ dialog.addEventListener('close',()=>{content.querySelector('.film-camera')?.cleanup();content.querySelector('video')?.pause();content.replaceChildren();trigger?.focus();});
 }
