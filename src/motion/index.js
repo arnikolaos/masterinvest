@@ -19,11 +19,18 @@ export function initMotion(t) {
  reduced.addEventListener('change',refresh);document.addEventListener('visibilitychange',refresh);
  if(hero)new IntersectionObserver(([e])=>{heroVisible=e.isIntersecting;refresh();}).observe(hero);
  const observer=new IntersectionObserver(entries=>{
-  let stagger=0;for(const e of entries){if(e.isIntersecting){e.target.style.transitionDelay=`${Math.min(stagger++,3)*100}ms`;e.target.classList.add('revealed');observer.unobserve(e.target);}}
+  let stagger=0;for(const e of entries){if(e.isIntersecting){if(e.target.classList.contains('section')){e.target.classList.add('section-illuminated');observer.unobserve(e.target);continue;}e.target.style.transitionDelay=`${Math.min(stagger++,3)*100}ms`;e.target.classList.add('revealed');observer.unobserve(e.target);}}
  },{threshold:0.05});
+ if(!reduced.matches)document.querySelectorAll('main > .section').forEach(section=>observer.observe(section));
  const candidates=document.querySelectorAll('main section:not(#hero) h2, main section:not(#hero) h3, main section:not(#hero) p, main section:not(#hero) picture, .destination-card, .venture-card, .lifecycle-steps li, .disciplines li, #contact .field, #contact address, #contact .contact-links');
  // Cards reveal as a unit; avoid stacking transforms on their children.
  candidates.forEach(el=>{if(el.closest('dialog')||el.parentElement.closest('.destination-card,.venture-card'))return;if(!reduced.matches&&el.getBoundingClientRect().top>=innerHeight){el.classList.add('reveal-ready');observer.observe(el);}});
- hero?.addEventListener('pointermove',e=>{if(paused||reduced.matches||e.pointerType!=='mouse')return;const r=hero.getBoundingClientRect();hero.style.setProperty('--pointer-x',`${e.clientX/r.width*100}%`);hero.style.setProperty('--pointer-y',`${(e.clientY-r.top)/r.height*100}%`);},{passive:true});
+ // One existing pointer listener supplies both the unchanged local bloom and page texture.
+ document.addEventListener('pointermove',e=>{
+  if(paused||reduced.matches||e.pointerType!=='mouse')return;
+  document.documentElement.style.setProperty('--surface-x',`${e.clientX}px`);
+  document.documentElement.style.setProperty('--surface-y',`${e.clientY}px`);
+  if(hero?.contains(e.target)){const r=hero.getBoundingClientRect();hero.style.setProperty('--pointer-x',`${e.clientX/r.width*100}%`);hero.style.setProperty('--pointer-y',`${(e.clientY-r.top)/r.height*100}%`);}
+ },{passive:true});
  refresh();
 }

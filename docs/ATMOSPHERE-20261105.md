@@ -1,0 +1,12 @@
+# Scoped hero, contacts and atmosphere refinement
+
+Checkpoint: `checkpoint-before-atmosphere-20261105`. Earlier checkpoints remain intact.
+
+- Both WhatsApp links now say “Message or call us on WhatsApp” (localized in Greek). Removed the separate mobile tel link only; office telephone unchanged.
+- Hero has its own keyframes, independent of the popup: one-second entry fade; motion starts at 1s; scale 1.2592/pan 72% at 10s; scale 1.36/full pan at 16s; scale 1.0648/pan 18% at 21s; wide composition at 25s. Desktop pan is +8% of image width; mobile +5.5%. Coordinated easing matches velocity at 10s and 21s; reversal at 16s and loop endpoints have zero velocity. Initial fade does not repeat as a black flash.
+- Verified the actual CSS keyframe offsets and values with a Node assertion script, not just syntax. Sampled transforms at 101 points per segment for centered desktop and 58%-origin mobile framing: no exposed edges. Matching loop endpoints and unchanged popup keyframes asserted.
+- One fixed, pointer-transparent page grain overlay reuses the existing SVG tile. Its 50% tile alpha × 6% opacity × soft radial mask gives approximately 2–3% maximum effective contribution. No animated noise, new JS loop, extra listener, filter, or forced compositing on this overlay. Removed the superseded hero grain layer. Top-layer popup retains its own existing grain, above the page overlay.
+- Moved the existing single passive pointer listener to document scope. It still supplies the same local hero bloom coordinates and also updates page texture coordinates. Original bloom has only a tiny warm-to-cool color adjustment. Static fallback on coarse pointers/reduced motion; pause respected.
+- Text/card reveals last 900ms with original directional offsets and stagger. A single 600ms subtle central section illumination is triggered once using the existing IntersectionObserver. Mobile illumination uses opacity only; reduced motion disables it. No new scroll listener or expensive blur.
+
+Build/type/content checks and all 11 existing unit/static tests pass. Performance review is code/asset based: no new assets, dependencies, loops or browser downloads. No browser/GPU timings, visual rendering or Core Web Vitals are claimed; owner handles visual review. Original media, popup animation, EmailJS, SEO, layout and typography are unchanged. Live HTTPS source and deployment are checked after publication.

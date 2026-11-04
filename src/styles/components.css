@@ -35,3 +35,32 @@ html[lang=el] .hero-kicker{letter-spacing:.04em}html[lang=el] .contact-title{fon
 @media(max-width:760px){.hero-media>picture img{transform-origin:58% 50%;--camera-pan:-3%}.dialog-content .film-photo{--camera-pan:-5%}}
 @media(prefers-reduced-motion:reduce){.hero-media>picture img,.dialog-content .film-photo{animation:none!important;transform:none!important}.hero-media::after,.film-camera::before{animation:none!important}.hero-media>picture::after,.film-camera::after{animation:none!important;opacity:0!important}}
 .film-camera:fullscreen{width:100vw;height:100vh;max-height:none;aspect-ratio:auto}.film-clock:fullscreen{object-position:center}
+/* Hero-only refinement: the popup keeps camera-travel and its existing timeline. */
+.hero-media>picture img{animation-name:hero-camera-travel;--hero-pan:8%}
+.hero.camera-started .hero-media>picture::after{animation-duration:1s}
+@keyframes hero-camera-travel{
+ 0%{transform:translate3d(0,0,0) scale(1)}
+ 4%{transform:translate3d(0,0,0) scale(1);animation-timing-function:cubic-bezier(.33,0,.67,.72)}
+ 40%{transform:translate3d(calc(var(--hero-pan)*.72),0,0) scale(1.2592);animation-timing-function:cubic-bezier(.33,.48,.67,1)}
+ 64%{transform:translate3d(var(--hero-pan),0,0) scale(1.36);animation-timing-function:cubic-bezier(.33,0,.67,.8)}
+ 84%{transform:translate3d(calc(var(--hero-pan)*.18),0,0) scale(1.0648);animation-timing-function:cubic-bezier(.33,.7288889,.67,1)}
+ 100%{transform:translate3d(0,0,0) scale(1)}
+}
+/* Single static page texture: the existing tile is 50% alpha, yielding
+   about 2% baseline / 3% near the light. No filters, animation or extra layer.
+   Top-layer dialogs/fullscreen retain their own grain above this overlay. */
+body::after{content:'';position:fixed;inset:0;z-index:10;pointer-events:none;background:url('../icons/film-grain.svg') repeat;opacity:.06;mask-image:radial-gradient(ellipse 550px 450px at var(--surface-x,60vw) var(--surface-y,40vh),#fff 0%,rgba(255,255,255,.85) 35%,rgba(255,255,255,.67) 100%)}
+.hero-media::after{content:none}
+.optical-light{background:radial-gradient(ellipse at var(--pointer-x,60%) var(--pointer-y,40%),#d8c39b12 0%,#bdcbd509 22%,transparent 45%)}
+@media(max-width:760px){.hero-media>picture img{--hero-pan:5.5%}}
+@media(hover:none),(pointer:coarse),(prefers-reduced-motion:reduce){body::after{mask-image:none;opacity:.04}}
+.motion-paused body::after{mask-image:none;opacity:.04}
+/* One-time section illumination shares the reveal observer; no scroll handler. */
+.reveal-ready:is(h2,h3,p,li,address,.field,.contact-links,.venture-card,.destination-card){transition-duration:900ms}
+main>.section{position:relative}
+.section-illuminated::before{content:'';position:absolute;top:0;left:2%;right:2%;height:min(60vh,480px);pointer-events:none;z-index:1;background:radial-gradient(ellipse 48% 65% at 50% 35%,rgba(245,237,221,.7),rgba(245,237,221,.18) 45%,transparent 80%);opacity:0;animation:section-illumination 600ms cubic-bezier(.22,1,.36,1) both}
+@keyframes section-illumination{0%{opacity:0;transform:scale(.92)}35%{opacity:.055}100%{opacity:0;transform:scale(1.04)}}
+@media(max-width:760px){.section-illuminated::before{animation-name:section-illumination-mobile;transform:none}}
+@keyframes section-illumination-mobile{0%,100%{opacity:0}35%{opacity:.035}}
+@media(prefers-reduced-motion:reduce){.section-illuminated::before{display:none}}
+.motion-paused .section-illuminated::before{display:none}

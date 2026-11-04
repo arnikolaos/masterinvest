@@ -17,7 +17,7 @@ export const ui = {
   unavailable:'Online enquiries are being connected. Please email us or use WhatsApp to get in touch.',
   invalid:'Please check the highlighted fields.', nameError:'Enter your name (2–100 characters).', emailError:'Enter a valid email address.', messageError:'Enter a message (10–5000 characters).',
   cooldown:'Please wait a minute before sending another message.', privacyLine:'Your details are used to respond to your enquiry.',
-  privacy:'Privacy policy', cookies:'Cookie notice', credits:'Image credits', whatsapp:'Message us on WhatsApp', call:'Call us', office:'Office', rights:'All rights reserved.',
+  privacy:'Privacy policy', cookies:'Cookie notice', credits:'Image credits', whatsapp:'Message or call us on WhatsApp', call:'Call us', office:'Office', rights:'All rights reserved.',
   back:'Back to the website', notFound:'A different direction.', notFoundText:'The page you are looking for could not be found.', home:'Return home',
   closeMedia:'Close media viewer', legalReview:'This notice is prepared for owner review before publication.',
  },
@@ -39,7 +39,7 @@ export const ui = {
   unavailable:'Η ηλεκτρονική φόρμα προετοιμάζεται. Επικοινωνήστε μαζί μας μέσω email ή WhatsApp.',
   invalid:'Ελέγξτε τα επισημασμένα πεδία.', nameError:'Συμπληρώστε το όνομά σας (2–100 χαρακτήρες).', emailError:'Συμπληρώστε μια έγκυρη διεύθυνση email.', messageError:'Συμπληρώστε το μήνυμά σας (10–5000 χαρακτήρες).',
   cooldown:'Περιμένετε ένα λεπτό πριν στείλετε νέο μήνυμα.', privacyLine:'Τα στοιχεία σας χρησιμοποιούνται για την απάντηση στο αίτημά σας.',
-  privacy:'Πολιτική απορρήτου', cookies:'Ενημέρωση cookies', credits:'Πηγές εικόνων', whatsapp:'Μήνυμα στο WhatsApp', call:'Καλέστε μας', office:'Γραφείο', rights:'Με την επιφύλαξη παντός δικαιώματος.',
+  privacy:'Πολιτική απορρήτου', cookies:'Ενημέρωση cookies', credits:'Πηγές εικόνων', whatsapp:'Στείλτε μήνυμα ή καλέστε μας στο WhatsApp', call:'Καλέστε μας', office:'Γραφείο', rights:'Με την επιφύλαξη παντός δικαιώματος.',
   back:'Επιστροφή στην ιστοσελίδα', notFound:'Μια άλλη κατεύθυνση.', notFoundText:'Η σελίδα που αναζητάτε δεν βρέθηκε.', home:'Επιστροφή στην αρχική',
   closeMedia:'Κλείσιμο προβολής', legalReview:'Το κείμενο έχει προετοιμαστεί για έλεγχο από τον ιδιοκτήτη πριν τη δημοσίευση.',
  }
