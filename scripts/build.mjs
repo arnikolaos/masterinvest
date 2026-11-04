@@ -17,7 +17,7 @@ if(base&&!/^\/[a-zA-Z0-9_-]+$/.test(base))throw Error('SITE_BASE_PATH must be em
 const origin=process.env.SITE_ORIGIN||site.origin;
 if(!/^https:\/\/[a-zA-Z0-9.-]+$/.test(origin))throw Error('SITE_ORIGIN must be an HTTPS origin without trailing slash');
 const url=p=>base+'/'+p;
-const emailConfig={enabled:process.env.PUBLIC_EMAILJS_ENABLED==='true',serviceId:process.env.PUBLIC_EMAILJS_SERVICE_ID||'',publicKey:process.env.PUBLIC_EMAILJS_PUBLIC_KEY||'',notificationTemplate:process.env.PUBLIC_EMAILJS_NOTIFICATION_TEMPLATE||'',autoreplyTemplate:process.env.PUBLIC_EMAILJS_AUTOREPLY_TEMPLATE||''};
+const emailConfig={deliveryVerified:process.env.PUBLIC_EMAILJS_DELIVERY_VERIFIED==='true',enabled:process.env.PUBLIC_EMAILJS_ENABLED==='true',serviceId:process.env.PUBLIC_EMAILJS_SERVICE_ID||'',publicKey:process.env.PUBLIC_EMAILJS_PUBLIC_KEY||'',notificationTemplate:process.env.PUBLIC_EMAILJS_NOTIFICATION_TEMPLATE||'',autoreplyTemplate:process.env.PUBLIC_EMAILJS_AUTOREPLY_TEMPLATE||''};
 if(emailConfig.enabled&&!isConfigured(emailConfig))throw Error('Invalid or incomplete dedicated EmailJS configuration');
 const release=process.env.RELEASE_APPROVED==='true';
 if(release&&(!Object.values(site.launch).every(Boolean)||!isConfigured(emailConfig)))throw Error('Release blocked: factual/privacy review and verified email delivery required');

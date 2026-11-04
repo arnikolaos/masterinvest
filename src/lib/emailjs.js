@@ -16,16 +16,17 @@ export async function sendEnquiry(config,input,locale,dependencies={}) {
  const {name,email,message}=validation.value;
  const fetchFn=dependencies.fetchFn||fetch;
  const wait=dependencies.wait||((ms)=>new Promise(resolve=>setTimeout(resolve,ms)));
- const params={from_name:name,reply_email:email,message,locale,is_greek:locale==='el'};
- /** @param {string} template */
- async function send(template) {
+ const notificationParams={to_name:'MASTER INVEST Team',from_name:name,email,site_name:'MASTER INVEST',message};
+ const replyParams={from_name:name,email,site_name:'MASTER INVEST'};
+ /** @param {string} template @param {Record<string,string>} params */
+ async function send(template,params) {
   const controller=new AbortController(); const timer=setTimeout(()=>controller.abort(),15000);
   try {
    const response=await fetchFn('https://api.emailjs.com/api/v1.0/email/send',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({service_id:config.serviceId,template_id:template,user_id:config.publicKey,template_params:params}),signal:controller.signal,credentials:'omit',referrerPolicy:'strict-origin-when-cross-origin'});
    if(!response.ok) throw new Error('DELIVERY_FAILED');
   } finally {clearTimeout(timer);}
  }
- await send(config.notificationTemplate);
- try {await wait(1100);await send(config.autoreplyTemplate);return {submitted:true,acknowledged:true};}
+ await send(config.notificationTemplate,notificationParams);
+ try {await wait(1100);await send(config.autoreplyTemplate,replyParams);return {submitted:true,acknowledged:true};}
  catch {return {submitted:true,acknowledged:false};}
 }

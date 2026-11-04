@@ -17,7 +17,7 @@ export function initContact({emailConfig,locale,t}) {
   if(Date.now()-lastAttempt<60000){status.textContent=t.cooldown;return;}
   lastAttempt=Date.now();try{sessionStorage.setItem('mi:last-send',String(lastAttempt));}catch{/* Storage is optional. */}
   busy=true;button.disabled=true;form.setAttribute('aria-busy','true');const original=button.innerHTML;button.textContent=t.sending;status.textContent=t.sending;
-  try {const result=await sendEnquiry(emailConfig,input,locale);status.textContent=t.success;form.reset();if(!result.acknowledged)console.warn('MASTER INVEST: enquiry accepted; acknowledgement unavailable.');}
+  try {const result=await sendEnquiry(emailConfig,input,locale);status.textContent=result.acknowledged?t.success:t.acknowledgementFailed;form.reset();if(!result.acknowledged)console.warn('MASTER INVEST: enquiry accepted; acknowledgement unavailable.');}
   catch{status.textContent=t.error;}
   finally{busy=false;button.disabled=false;button.innerHTML=original;form.removeAttribute('aria-busy');status.focus();}
  });
