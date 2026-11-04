@@ -37,21 +37,21 @@
       "ownerVerifiedProject": false
     },
     {
-      "id": "hero-loop",
-      "path": "public/multimedia/video/hero-loop.mp4",
+      "id": "hero-loop-smooth",
+      "path": "public/multimedia/video/hero-loop-smooth.mp4",
       "mediaType": "video",
       "status": "illustrative",
       "source": "villa",
       "tool": "FFmpeg camera-move animation of generated still; not AI-generated moving scene",
-      "durationSeconds": 10,
-      "fps": 24,
+      "durationSeconds": 12,
+      "fps": 60,
       "codec": "H.264",
       "width": 1280,
       "height": 720,
       "audio": false,
       "poster": "public/multimedia/architecture/villa-1672.webp",
       "subtitles": "Not applicable: silent decorative footage",
-      "loop": "Cosine camera push returns to starting scale; endpoints differ by one small frame step",
+      "loop": "Cosine 1.8% camera push, 8192px oversampling to reduce integer-crop jitter, 720 frames; first/last camera velocity approaches zero.",
       "ownerVerifiedProject": false
     }
   ],
