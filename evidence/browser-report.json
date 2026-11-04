@@ -1,0 +1,23 @@
+{
+  "date": "2026-11-04T09:53:59.889Z",
+  "checks": [
+    "chromium en 320: layout, axe, forms, motion, viewer, locale navigation",
+    "chromium en 390: layout, axe, forms, motion, viewer, locale navigation",
+    "chromium en 768: layout, axe, forms, motion, viewer, locale navigation",
+    "chromium en 1440: layout, axe, forms, motion, viewer, locale navigation",
+    "chromium en 2560: layout, axe, forms, motion, viewer, locale navigation",
+    "chromium el 320: layout, axe, forms, motion, viewer, locale navigation",
+    "chromium el 390: layout, axe, forms, motion, viewer, locale navigation",
+    "chromium el 768: layout, axe, forms, motion, viewer, locale navigation",
+    "chromium el 1440: layout, axe, forms, motion, viewer, locale navigation",
+    "chromium el 2560: layout, axe, forms, motion, viewer, locale navigation",
+    "chromium mocked EmailJS en success",
+    "chromium mocked EmailJS en internal-failure",
+    "chromium mocked EmailJS en autoreply-failure",
+    "chromium mocked EmailJS el success",
+    "chromium mocked EmailJS el internal-failure",
+    "chromium mocked EmailJS el autoreply-failure"
+  ],
+  "failures": [],
+  "status": "passed"
+}

@@ -1,0 +1,304 @@
+{
+  "version": 1,
+  "checked_at": "2026-11-04",
+  "credits_requirement": "Expose title, creator, source link, license link and modification notice on a public bilingual media-credits page linked from the footer. BY-SA derivatives remain available under their original CC BY-SA 4.0 license, irrespective of website copyright.",
+  "assets": [
+    {
+      "id": "athens-riviera",
+      "title": "Beach in Vouliagmeni Athens, Greece",
+      "creator": "dronepicr",
+      "creator_url": "https://www.flickr.com/people/132646954@N02",
+      "license": "CC BY 2.0",
+      "license_url": "https://creativecommons.org/licenses/by/2.0/",
+      "original_dimensions": [
+        6240,
+        4160
+      ],
+      "photographed": "2018-07-14",
+      "location": "Vouliagmeni, Athens Riviera, Greece",
+      "coordinates": [
+        37.828161,
+        23.769744
+      ],
+      "source_origin": "https://flickr.com/photos/132646954@N02/44148788464",
+      "alt": {
+        "en": "Calm turquoise water and the beachfront of Vouliagmeni on the Athens Riviera.",
+        "el": "Ήρεμα γαλαζοπράσινα νερά και η παραλία της Βουλιαγμένης στην Αθηναϊκή Ριβιέρα."
+      },
+      "source_url": "https://commons.wikimedia.org/wiki/File:Beach_in_Vouliagmeni_Athens%2C_Greece_%2844148788464%29.jpg",
+      "original_image_url": "https://upload.wikimedia.org/wikipedia/commons/3/3e/Beach_in_Vouliagmeni_Athens%2C_Greece_%2844148788464%29.jpg",
+      "role": "Destination photography",
+      "media_type": "image",
+      "status": "documentary",
+      "illustrative": false,
+      "owner_verified_project": false,
+      "location_identity_evidence": "The linked Wikimedia Commons file description identifies this location and records camera coordinates.",
+      "rights_verified_on": "2026-11-04",
+      "commercial_use_permitted": true,
+      "commercial_use_basis": "The source file page declares the indicated Creative Commons license; the linked license permits commercial copying and adaptation subject to its conditions.",
+      "attribution": "“Beach in Vouliagmeni Athens, Greece” — dronepicr, Wikimedia Commons, CC BY 2.0. Resized, recompressed and displayed with responsive crops.",
+      "modifications": [
+        "Auto orientation",
+        "EXIF metadata removed for delivery",
+        "Resized without enlargement",
+        "WebP/JPEG recompression",
+        "Responsive object-fit cropping may be applied by layout"
+      ],
+      "derivative_license": "CC BY 2.0",
+      "notes": "Documentary image of the destination only. Does not identify any MASTER INVEST owned, completed, marketed or available asset. No endorsement implied.",
+      "attribution_required": true,
+      "share_alike_required": false,
+      "fallback": "/multimedia/destinations/athens-riviera.jpg",
+      "variants": [
+        {
+          "path": "/multimedia/destinations/athens-riviera-640.webp",
+          "width": 640,
+          "height": 427,
+          "bytes": 28096
+        },
+        {
+          "path": "/multimedia/destinations/athens-riviera-1200.webp",
+          "width": 1200,
+          "height": 800,
+          "bytes": 91874
+        },
+        {
+          "path": "/multimedia/destinations/athens-riviera-1920.webp",
+          "width": 1920,
+          "height": 1280,
+          "bytes": 213202
+        }
+      ],
+      "original_sha256": "787b6e9cf413c3ec4e47cabdbbf696020d62389fd95595f775e41e83ee4b5378",
+      "fallback_bytes": 161105,
+      "fallback_dimensions": [
+        1200,
+        800
+      ],
+      "visually_reviewed": true,
+      "visual_review_notes": "Reviewed at 640px in contact sheet; location subject matches source description and no visible watermarks."
+    },
+    {
+      "id": "monemvasia",
+      "title": "Καστροπολιτεια μονεμβασιας",
+      "creator": "Katsikas pantelis",
+      "creator_url": "https://commons.wikimedia.org/wiki/User:Katsikas_pantelis",
+      "license": "CC BY-SA 4.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "original_dimensions": [
+        2200,
+        1466
+      ],
+      "photographed": "2020-01-22",
+      "location": "Monemvasia old town, Peloponnese, Greece",
+      "coordinates": [
+        36.685693,
+        23.058481
+      ],
+      "source_origin": "Own work, published on Wikimedia Commons",
+      "alt": {
+        "en": "Monemvasia’s stone-built old town between the monumental rock and the sea, photographed from above.",
+        "el": "Η πέτρινη καστροπολιτεία της Μονεμβασιάς ανάμεσα στον επιβλητικό βράχο και τη θάλασσα, από ψηλά."
+      },
+      "source_url": "https://commons.wikimedia.org/wiki/File:%CE%9A%CE%B1%CF%83%CF%84%CF%81%CE%BF%CF%80%CE%BF%CE%BB%CE%B9%CF%84%CE%B5%CE%B9%CE%B1_%CE%BC%CE%BF%CE%BD%CE%B5%CE%BC%CE%B2%CE%B1%CF%83%CE%B9%CE%B1%CF%82.jpg",
+      "original_image_url": "https://upload.wikimedia.org/wikipedia/commons/7/7d/%CE%9A%CE%B1%CF%83%CF%84%CF%81%CE%BF%CF%80%CE%BF%CE%BB%CE%B9%CF%84%CE%B5%CE%B9%CE%B1_%CE%BC%CE%BF%CE%BD%CE%B5%CE%BC%CE%B2%CE%B1%CF%83%CE%B9%CE%B1%CF%82.jpg",
+      "role": "Destination photography",
+      "media_type": "image",
+      "status": "documentary",
+      "illustrative": false,
+      "owner_verified_project": false,
+      "location_identity_evidence": "The linked Wikimedia Commons file description identifies this location and records camera coordinates.",
+      "rights_verified_on": "2026-11-04",
+      "commercial_use_permitted": true,
+      "commercial_use_basis": "The source file page declares the indicated Creative Commons license; the linked license permits commercial copying and adaptation subject to its conditions.",
+      "attribution": "“Καστροπολιτεια μονεμβασιας” — Katsikas pantelis, Wikimedia Commons, CC BY-SA 4.0. Resized, recompressed and displayed with responsive crops.",
+      "modifications": [
+        "Auto orientation",
+        "EXIF metadata removed for delivery",
+        "Resized without enlargement",
+        "WebP/JPEG recompression",
+        "Responsive object-fit cropping may be applied by layout"
+      ],
+      "derivative_license": "CC BY-SA 4.0",
+      "notes": "Documentary image of the destination only. Does not identify any MASTER INVEST owned, completed, marketed or available asset. No endorsement implied.",
+      "attribution_required": true,
+      "share_alike_required": true,
+      "fallback": "/multimedia/destinations/monemvasia.jpg",
+      "variants": [
+        {
+          "path": "/multimedia/destinations/monemvasia-640.webp",
+          "width": 640,
+          "height": 426,
+          "bytes": 47358
+        },
+        {
+          "path": "/multimedia/destinations/monemvasia-1200.webp",
+          "width": 1200,
+          "height": 800,
+          "bytes": 166668
+        },
+        {
+          "path": "/multimedia/destinations/monemvasia-1920.webp",
+          "width": 1920,
+          "height": 1279,
+          "bytes": 403292
+        }
+      ],
+      "original_sha256": "cf7be5fa6fd399dfb33d7fd416a95b69c43b675634a98f8cee59c0ada00c1f16",
+      "fallback_bytes": 269910,
+      "fallback_dimensions": [
+        1200,
+        800
+      ],
+      "visually_reviewed": true,
+      "visual_review_notes": "Reviewed at 640px in contact sheet; location subject matches source description and no visible watermarks."
+    },
+    {
+      "id": "kyllini",
+      "title": "Aerial view of Kyllini Beach, Greece",
+      "creator": "dronepicr",
+      "creator_url": "https://www.flickr.com/people/132646954@N02",
+      "license": "CC BY 2.0",
+      "license_url": "https://creativecommons.org/licenses/by/2.0/",
+      "original_dimensions": [
+        5464,
+        3640
+      ],
+      "photographed": "2020-10-21",
+      "location": "Kyllini coast, western Peloponnese, Greece",
+      "coordinates": [
+        37.880002,
+        21.108194
+      ],
+      "source_origin": "https://flickr.com/photos/132646954@N02/51224121780",
+      "alt": {
+        "en": "Aerial view of Kyllini’s sandy coastline and the Ionian Sea in the western Peloponnese.",
+        "el": "Εναέρια θέα της αμμώδους ακτής της Κυλλήνης και του Ιονίου στη δυτική Πελοπόννησο."
+      },
+      "source_url": "https://commons.wikimedia.org/wiki/File:Aerial_view_of_Kyllini_Beach%2C_Greece_%2851224121780%29.jpg",
+      "original_image_url": "https://upload.wikimedia.org/wikipedia/commons/c/c4/Aerial_view_of_Kyllini_Beach%2C_Greece_%2851224121780%29.jpg",
+      "role": "Destination photography",
+      "media_type": "image",
+      "status": "documentary",
+      "illustrative": false,
+      "owner_verified_project": false,
+      "location_identity_evidence": "The linked Wikimedia Commons file description identifies this location and records camera coordinates.",
+      "rights_verified_on": "2026-11-04",
+      "commercial_use_permitted": true,
+      "commercial_use_basis": "The source file page declares the indicated Creative Commons license; the linked license permits commercial copying and adaptation subject to its conditions.",
+      "attribution": "“Aerial view of Kyllini Beach, Greece” — dronepicr, Wikimedia Commons, CC BY 2.0. Resized, recompressed and displayed with responsive crops.",
+      "modifications": [
+        "Auto orientation",
+        "EXIF metadata removed for delivery",
+        "Resized without enlargement",
+        "WebP/JPEG recompression",
+        "Responsive object-fit cropping may be applied by layout"
+      ],
+      "derivative_license": "CC BY 2.0",
+      "notes": "Documentary image of the destination only. Does not identify any MASTER INVEST owned, completed, marketed or available asset. No endorsement implied.",
+      "attribution_required": true,
+      "share_alike_required": false,
+      "fallback": "/multimedia/destinations/kyllini.jpg",
+      "variants": [
+        {
+          "path": "/multimedia/destinations/kyllini-640.webp",
+          "width": 640,
+          "height": 426,
+          "bytes": 41148
+        },
+        {
+          "path": "/multimedia/destinations/kyllini-1200.webp",
+          "width": 1200,
+          "height": 799,
+          "bytes": 143176
+        },
+        {
+          "path": "/multimedia/destinations/kyllini-1920.webp",
+          "width": 1920,
+          "height": 1279,
+          "bytes": 366654
+        }
+      ],
+      "original_sha256": "5c0c7dc128fa7093d11226cbfc4073a58d72465477355da11ea12b99fa5c90d4",
+      "fallback_bytes": 241929,
+      "fallback_dimensions": [
+        1200,
+        799
+      ],
+      "visually_reviewed": true,
+      "visual_review_notes": "Reviewed at 640px in contact sheet; location subject matches source description and no visible watermarks."
+    },
+    {
+      "id": "across-greece",
+      "title": "Oia Santorini",
+      "creator": "Cthuremella",
+      "creator_url": "https://commons.wikimedia.org/wiki/User:Cthuremella",
+      "license": "CC BY-SA 4.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "original_dimensions": [
+        6000,
+        4000
+      ],
+      "photographed": "2016-08-27",
+      "location": "Oia, Santorini, Greece",
+      "coordinates": null,
+      "source_origin": "Own work, published on Wikimedia Commons",
+      "alt": {
+        "en": "Whitewashed buildings in Oia, Santorini at dusk, overlooking the Aegean Sea.",
+        "el": "Τα λευκά κτίρια της Οίας στη Σαντορίνη το σούρουπο, με θέα στο Αιγαίο."
+      },
+      "source_url": "https://commons.wikimedia.org/wiki/File:Oia_Santorini.jpg",
+      "original_image_url": "https://upload.wikimedia.org/wikipedia/commons/2/20/Oia_Santorini.jpg",
+      "role": "Destination photography",
+      "media_type": "image",
+      "status": "documentary",
+      "illustrative": false,
+      "owner_verified_project": false,
+      "location_identity_evidence": "The linked Wikimedia Commons file description identifies this location.",
+      "rights_verified_on": "2026-11-04",
+      "commercial_use_permitted": true,
+      "commercial_use_basis": "The source file page declares the indicated Creative Commons license; the linked license permits commercial copying and adaptation subject to its conditions.",
+      "attribution": "“Oia Santorini” — Cthuremella, Wikimedia Commons, CC BY-SA 4.0. Resized, recompressed and displayed with responsive crops.",
+      "modifications": [
+        "Auto orientation",
+        "EXIF metadata removed for delivery",
+        "Resized without enlargement",
+        "WebP/JPEG recompression",
+        "Responsive object-fit cropping may be applied by layout"
+      ],
+      "derivative_license": "CC BY-SA 4.0",
+      "notes": "Documentary image of the destination only. Does not identify any MASTER INVEST owned, completed, marketed or available asset. No endorsement implied.",
+      "attribution_required": true,
+      "share_alike_required": true,
+      "fallback": "/multimedia/destinations/across-greece.jpg",
+      "variants": [
+        {
+          "path": "/multimedia/destinations/across-greece-640.webp",
+          "width": 640,
+          "height": 427,
+          "bytes": 19960
+        },
+        {
+          "path": "/multimedia/destinations/across-greece-1200.webp",
+          "width": 1200,
+          "height": 800,
+          "bytes": 46842
+        },
+        {
+          "path": "/multimedia/destinations/across-greece-1920.webp",
+          "width": 1920,
+          "height": 1280,
+          "bytes": 87198
+        }
+      ],
+      "original_sha256": "aec4f8cbcbd6a911ce705916978e6e55d444d364bebaaf2e3918ddba73e5d7d6",
+      "fallback_bytes": 110519,
+      "fallback_dimensions": [
+        1200,
+        800
+      ],
+      "visually_reviewed": true,
+      "visual_review_notes": "Reviewed at 640px in contact sheet; location subject matches source description and no visible watermarks."
+    }
+  ]
+}

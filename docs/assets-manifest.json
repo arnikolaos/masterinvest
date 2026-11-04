@@ -1,0 +1,59 @@
+{
+  "version": 1,
+  "created": "2026-11-04",
+  "assets": [
+    {
+      "id": "villa",
+      "role": "Hero, residential concept and poster",
+      "mediaType": "image",
+      "status": "illustrative",
+      "tool": "OpenAI built-in image_gen",
+      "model": "Not exposed by tool",
+      "prompt": "Use case: photorealistic-natural. Asset: cinematic ultra-wide website hero architectural concept. Create a sophisticated Mediterranean coastal villa in natural pale limestone and dark bronze glass, a long low horizontal composition, cantilevered roof framing a deep shaded terrace, still reflecting pool in foreground, olive trees, distant muted blue sea, warm late-afternoon raking sunlight. Photorealistic architectural editorial photograph, restrained luxury, tactile stone, believable structure and exceptional composition. Wide 16:9 landscape. Building predominantly in right and lower portions, dark calm sky and shaded negative space upper left for large white website typography. Natural highlights, deep charcoal shadows, subtle film texture. No text, logos, people, watermark. Fictional illustrative architecture, not a real property.",
+      "original": "originals/villa-original.png",
+      "variants": [
+        "public/multimedia/architecture/villa-640.webp",
+        "public/multimedia/architecture/villa-1200.webp",
+        "public/multimedia/architecture/villa-1672.webp"
+      ],
+      "fallback": "public/multimedia/architecture/villa.jpg",
+      "ownerVerifiedProject": false
+    },
+    {
+      "id": "hospitality",
+      "role": "Hospitality concept and lifecycle",
+      "mediaType": "image",
+      "status": "illustrative",
+      "tool": "OpenAI built-in image_gen",
+      "model": "Not exposed by tool",
+      "prompt": "Use case: photorealistic-natural. Asset: editorial architectural concept image for MASTER INVEST website gallery. Cinematic wide architectural photograph of a fictional Mediterranean boutique coastal resort, stepped pale limestone volumes set sensitively into an olive-planted hillside, shaded colonnade with beautifully textured travertine walls in foreground, intimate courtyard with mature olive tree and long narrow reflecting pool, blue sea glimpsed through a portal beyond. Strong architectural composition, natural imperfections, sophisticated intimate hospitality, warm afternoon light and deep shadows, restrained natural palette. Wide landscape 16:9, no people, no text or watermarks, no logos, no implausible structure. Clearly an architectural visualization, no real project identity.",
+      "original": "originals/hospitality-original.png",
+      "variants": [
+        "public/multimedia/architecture/hospitality-640.webp",
+        "public/multimedia/architecture/hospitality-1200.webp",
+        "public/multimedia/architecture/hospitality-1672.webp"
+      ],
+      "fallback": "public/multimedia/architecture/hospitality.jpg",
+      "ownerVerifiedProject": false
+    },
+    {
+      "id": "hero-loop",
+      "path": "public/multimedia/video/hero-loop.mp4",
+      "mediaType": "video",
+      "status": "illustrative",
+      "source": "villa",
+      "tool": "FFmpeg camera-move animation of generated still; not AI-generated moving scene",
+      "durationSeconds": 10,
+      "fps": 24,
+      "codec": "H.264",
+      "width": 1280,
+      "height": 720,
+      "audio": false,
+      "poster": "public/multimedia/architecture/villa-1672.webp",
+      "subtitles": "Not applicable: silent decorative footage",
+      "loop": "Cosine camera push returns to starting scale; endpoints differ by one small frame step",
+      "ownerVerifiedProject": false
+    }
+  ],
+  "documentaryManifest": "destination-sources.json"
+}

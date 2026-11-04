@@ -1,0 +1,110 @@
+{
+  "hero": {
+    "title": "BEYOND PROPERTY.",
+    "paragraphs": [],
+    "items": []
+  },
+  "philosophy": {
+    "title": "Opportunity is only the beginning.",
+    "paragraphs": [
+      "At MASTER INVEST, we look beyond individual properties to the possibilities they represent. We connect opportunities with the right expertise, partnerships and investment strategies—bringing together the people and capabilities required to move from an initial idea to a valuable, enduring asset.",
+      "Rooted in decades of collective experience, our approach combines market understanding, real-estate insight and practical development expertise across Greece."
+    ],
+    "items": []
+  },
+  "expertise": {
+    "title": "An integrated approach to investment and development.",
+    "paragraphs": [],
+    "items": [
+      {
+        "title": "Investment Opportunities",
+        "description": "Identifying and evaluating land, properties and ventures with development potential."
+      },
+      {
+        "title": "Premium Real Estate",
+        "description": "Supporting the acquisition, positioning, marketing and sale of selected high-value properties."
+      },
+      {
+        "title": "Development & Turnkey Delivery",
+        "description": "Coordinating the full development journey, from feasibility and architectural design to engineering, construction and handover."
+      },
+      {
+        "title": "Hospitality Ventures",
+        "description": "Supporting the creation and development of villas, resorts, hotels and distinctive hospitality destinations."
+      },
+      {
+        "title": "Strategic Advisory",
+        "description": "Bringing together commercial, technical and specialist expertise to help shape and advance complex projects."
+      },
+      {
+        "title": "Management & Operations",
+        "description": "Supporting the transition from completed property to operational asset through appropriate management partnerships and services."
+      }
+    ]
+  },
+  "destinations": {
+    "title": "Distinct places. Exceptional potential.",
+    "paragraphs": [
+      "Our experience and project interests extend across Greece, including the Athens Riviera, Monemvasia and Kyllini. From premium residential settings to hospitality-led destinations, each location calls for its own investment logic, design response and long-term vision."
+    ],
+    "items": [
+      {
+        "title": "Athens Riviera",
+        "description": "Premium residential opportunities and carefully positioned real-estate developments."
+      },
+      {
+        "title": "Monemvasia",
+        "description": "Hospitality concepts, resort settings and villa development potential."
+      },
+      {
+        "title": "Kyllini",
+        "description": "Coastal destinations and villa-led development opportunities."
+      },
+      {
+        "title": "Across Greece",
+        "description": "Selected assets, partnerships and projects shaped by location and potential."
+      }
+    ]
+  },
+  "ventures": {
+    "title": "Designed for potential. Developed for value.",
+    "paragraphs": [
+      "Our portfolio presentation brings together selected development interests and project concepts, from luxury residences and villas to hospitality ventures. Individual opportunities are presented with clear status, scope and supporting documentation when available."
+    ],
+    "items": []
+  },
+  "lifecycle": {
+    "title": "From the first possibility to the final detail.",
+    "paragraphs": [
+      "A successful development requires continuity of thought and execution. We help assemble the right specialists and partners across site identification, due diligence, feasibility, investment planning, architecture, engineering, delivery and ongoing operation. Each project is structured around its specific commercial, technical and regulatory requirements."
+    ],
+    "items": []
+  },
+  "team": {
+    "title": "One vision. Integrated expertise.",
+    "paragraphs": [
+      "Successful ventures depend on more than capital. Through a multidisciplinary network of entrepreneurs, investment and business advisors, architects, engineers, legal and financial professionals, project managers and hospitality specialists, MASTER INVEST brings together the expertise needed to advance complex opportunities from concept to operation."
+    ],
+    "items": []
+  },
+  "partnerships": {
+    "title": "Built for collaboration.",
+    "paragraphs": [
+      "We engage with investors, property owners, developers and strategic partners to explore investment opportunities, joint ventures and tailored development structures. Where relevant, projects may also be assessed against suitable national or European financing and support frameworks, subject to programme conditions and eligibility.",
+      "Our objective is straightforward: align the right opportunity with the right partners, resources and execution strategy."
+    ],
+    "items": []
+  },
+  "contact": {
+    "title": "LET'S CREATE VALUE.",
+    "paragraphs": [
+      "Whether you are exploring an investment, a development opportunity or a strategic partnership, we welcome a conversation."
+    ],
+    "items": []
+  },
+  "footer": {
+    "title": "MASTER INVEST",
+    "paragraphs": [],
+    "items": []
+  }
+}

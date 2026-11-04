@@ -1,0 +1,9 @@
+A new message was submitted via masterinvest.gr.
+
+Name: {{from_name}}
+Email: {{reply_email}}
+Website: masterinvest.gr
+Language: {{locale}}
+
+Message:
+{{message}}

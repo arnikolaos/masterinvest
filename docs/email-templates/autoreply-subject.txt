@@ -1,0 +1,1 @@
+{{#is_greek}}MASTER INVEST | Ευχαριστούμε για την επικοινωνία{{/is_greek}}{{^is_greek}}MASTER INVEST | Thank You for Contacting Us{{/is_greek}}

@@ -1,0 +1,22 @@
+{{#is_greek}}
+Αγαπητέ/ή {{from_name}},
+
+Σας ευχαριστούμε για την επικοινωνία με τη MASTER INVEST.
+
+Λάβαμε το μήνυμά σας και εκτιμούμε το ενδιαφέρον σας. Η ομάδα μας θα εξετάσει το αίτημά σας και θα απαντήσει το συντομότερο δυνατό.
+
+Με εκτίμηση,
+MASTER INVEST
+Επενδύσεις · Ανάπτυξη · Στρατηγικές Συνεργασίες
+{{/is_greek}}
+{{^is_greek}}
+Dear {{from_name}},
+
+Thank you for contacting MASTER INVEST.
+
+We have received your message and appreciate your interest. Our team will review your enquiry and respond as soon as possible.
+
+Kind regards,
+MASTER INVEST
+Investment · Development · Strategic Partnerships
+{{/is_greek}}

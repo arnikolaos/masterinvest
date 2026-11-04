@@ -1,0 +1,1 @@
+{"compilerOptions":{"allowJs":true,"checkJs":true,"noEmit":true,"strict":true,"target":"ES2022","module":"ESNext","moduleResolution":"Bundler","lib":["ES2022","DOM"]},"include":["src/data/schema.d.ts","src/data/projects.js","src/lib/validation.js","src/lib/emailjs.js"]}
