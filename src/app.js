@@ -1,4 +1,5 @@
 import {initContact} from './lib/contact-form.js';
+import {initFloatingContact} from './lib/floating-contact.js';
 import {initMotion} from './motion/index.js';
 import {cinematicFilm} from './motion/film.js';
 const locale=document.documentElement.lang;
@@ -20,8 +21,7 @@ document.querySelectorAll('[data-locale]').forEach(link=>link.addEventListener('
  if(section&&section.id!=='hero')link.hash=section.id;
 }));
 try{const raw=sessionStorage.getItem('mi:scroll');if(raw){sessionStorage.removeItem('mi:scroll');const saved=JSON.parse(raw);if(saved.target===locale&&Date.now()-saved.time<30000){const section=document.getElementById(saved.id);if(section){const restore=()=>scrollTo({top:section.offsetTop+section.offsetHeight*saved.ratio,behavior:'instant'});requestAnimationFrame(restore);window.addEventListener('load',restore,{once:true});}}}}catch{/* Ignore unavailable or invalid storage. */}
-const floating=document.querySelector('.floating-contact'),contact=document.querySelector('#contact');
-if(floating&&contact)new IntersectionObserver(([entry])=>{floating.classList.toggle('is-hidden',entry.isIntersecting);floating.tabIndex=entry.isIntersecting?-1:0;}).observe(contact);
+initFloatingContact();
 const dialog=document.querySelector('.media-dialog');
 if(dialog){const content=dialog.querySelector('.dialog-content'),caption=dialog.querySelector('#media-caption');let trigger;
  document.querySelectorAll('[data-viewer]').forEach(link=>link.addEventListener('click',event=>{event.preventDefault();trigger=link;const isVideo=link.dataset.mediaType==='video';const media=document.createElement(isVideo?'video':'img');media.src=link.href;if(isVideo){media.controls=true;media.playsInline=true;media.preload='metadata';media.poster=link.dataset.poster||'';}else{media.alt=link.dataset.caption;}content.replaceChildren(isVideo?cinematicFilm(media,link.dataset.caption):media);caption.textContent=link.dataset.caption;dialog.showModal();}));

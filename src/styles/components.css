@@ -66,3 +66,7 @@ main>.section{position:relative}
 .motion-paused .section-illuminated::before{display:none}
 
 .light.section-illuminated{--section-light:130,113,82}
+/* Floating CTA visibility only; all existing geometry/appearance retained. */
+.floating-contact{transition:opacity 300ms ease,visibility 0s linear 0s}
+.floating-contact.is-hidden{visibility:hidden;transition:opacity 300ms ease,visibility 0s linear 300ms;pointer-events:none}
+@media(prefers-reduced-motion:reduce){.floating-contact,.floating-contact.is-hidden{transition:none!important}}
