@@ -91,3 +91,18 @@ main>.section{position:relative}
  100%{opacity:1;filter:blur(0);text-shadow:none}
 }
 @media(prefers-reduced-motion:reduce){.hero-master,.hero-invest,.hero-category-word{animation:none!important;opacity:1;transform:none;filter:none;text-shadow:none;clip-path:none}}
+/* Hero links enter after the title, without changing their geometry. */
+.hero-bottom>.text-link{animation:hero-link-bloom 700ms cubic-bezier(.22,.7,.36,1) 1250ms both}
+.hero>.scroll-cue{animation:hero-link-bloom 700ms cubic-bezier(.22,.7,.36,1) 1600ms both}
+@keyframes hero-link-bloom{
+ 0%{opacity:0;filter:blur(2px);text-shadow:0 0 12px rgba(241,239,233,.3)}
+ 50%{opacity:.75;text-shadow:0 0 6px rgba(241,239,233,.15)}
+ 100%{opacity:1;filter:blur(0);text-shadow:none}
+}
+.hero-bottom>.text-link:focus-visible,.hero>.scroll-cue:focus-visible{animation:none;opacity:1;filter:none;text-shadow:none}
+@media(prefers-reduced-motion:reduce){.hero-bottom>.text-link,.hero>.scroll-cue{animation:none!important;opacity:1;filter:none;text-shadow:none}}
+/* Contact follows the completed scroll-cue entrance; hiding retains priority. */
+.floating-contact{animation-delay:2300ms;animation-fill-mode:backwards}
+.floating-contact.is-hidden{opacity:0!important}
+.floating-contact:focus-visible{animation:none}
+@media(prefers-reduced-motion:reduce){.floating-contact{animation:none!important}}
