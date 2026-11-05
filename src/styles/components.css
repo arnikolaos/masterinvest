@@ -106,7 +106,7 @@ main>.section{position:relative}
 .floating-contact.is-hidden{opacity:0!important}
 .floating-contact:focus-visible{animation:none}
 @media(prefers-reduced-motion:reduce){.floating-contact{animation:none!important}}
-/* Pause control enters after the scroll cue; keyboard access stays immediate. */
-.hero-controls>.video-toggle{animation:hero-link-bloom 700ms cubic-bezier(.22,.7,.36,1) 3550ms both}
+/* Pause control enters after the contact button; keyboard access stays immediate. */
+.hero-controls>.video-toggle{animation:hero-link-bloom 700ms cubic-bezier(.22,.7,.36,1) 4350ms both}
 .hero-controls>.video-toggle:focus-visible{animation:none;opacity:1;filter:none;text-shadow:none}
 @media(prefers-reduced-motion:reduce){.hero-controls>.video-toggle{animation:none!important;opacity:1;filter:none;text-shadow:none}}
