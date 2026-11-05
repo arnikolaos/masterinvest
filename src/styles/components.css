@@ -74,7 +74,7 @@ main>.section{position:relative}
 .hero-title{animation:none}
 .hero-master{animation:master-bloom 1200ms cubic-bezier(.25,.65,.3,1) both}
 .hero-invest{animation:invest-arrive 1000ms cubic-bezier(.22,.7,.36,1) 150ms both}
-.hero-category-word{display:inline-block;animation:category-bloom 600ms cubic-bezier(.22,.7,.36,1) both;animation-delay:calc(1200ms + var(--word-order)*160ms)}
+.hero-category-word{display:inline-block;animation:category-bloom 650ms cubic-bezier(.22,.7,.36,1) both;animation-delay:calc(1200ms + var(--word-order)*180ms)}
 @keyframes master-bloom{
  0%{opacity:0;transform:translate3d(-100vw,0,0);filter:blur(6px);text-shadow:0 0 24px rgba(241,239,233,.35)}
  30%{opacity:.55;filter:blur(3px);text-shadow:0 0 20px rgba(241,239,233,.3)}
@@ -91,9 +91,9 @@ main>.section{position:relative}
  100%{opacity:1;filter:blur(0);text-shadow:none}
 }
 @media(prefers-reduced-motion:reduce){.hero-master,.hero-invest,.hero-category-word{animation:none!important;opacity:1;transform:none;filter:none;text-shadow:none;clip-path:none}}
-/* Hero links enter after the title, without changing their geometry. */
-.hero-bottom>.text-link{animation:hero-link-bloom 700ms cubic-bezier(.22,.7,.36,1) 1250ms both}
-.hero>.scroll-cue{animation:hero-link-bloom 700ms cubic-bezier(.22,.7,.36,1) 1600ms both}
+/* Hero links enter after the tagline, without changing their geometry. */
+.hero-bottom>.text-link{animation:hero-link-bloom 700ms cubic-bezier(.22,.7,.36,1) 2450ms both}
+.hero>.scroll-cue{animation:hero-link-bloom 700ms cubic-bezier(.22,.7,.36,1) 2800ms both}
 @keyframes hero-link-bloom{
  0%{opacity:0;filter:blur(2px);text-shadow:0 0 12px rgba(241,239,233,.3)}
  50%{opacity:.75;text-shadow:0 0 6px rgba(241,239,233,.15)}
@@ -102,7 +102,7 @@ main>.section{position:relative}
 .hero-bottom>.text-link:focus-visible,.hero>.scroll-cue:focus-visible{animation:none;opacity:1;filter:none;text-shadow:none}
 @media(prefers-reduced-motion:reduce){.hero-bottom>.text-link,.hero>.scroll-cue{animation:none!important;opacity:1;filter:none;text-shadow:none}}
 /* Contact follows the completed scroll-cue entrance; hiding retains priority. */
-.floating-contact{animation-delay:2300ms;animation-fill-mode:backwards}
+.floating-contact{animation-delay:3500ms;animation-fill-mode:backwards}
 .floating-contact.is-hidden{opacity:0!important}
 .floating-contact:focus-visible{animation:none}
 @media(prefers-reduced-motion:reduce){.floating-contact{animation:none!important}}
