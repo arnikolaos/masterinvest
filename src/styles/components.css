@@ -72,17 +72,17 @@ main>.section{position:relative}
 @media(prefers-reduced-motion:reduce){.floating-contact,.floating-contact.is-hidden{transition:none!important}}
 /* Hero text entrance only. Final typography and layout are unchanged. */
 .hero-title{animation:none}
-.hero-master{animation:master-bloom 520ms cubic-bezier(.22,1,.36,1) both}
-.hero-invest{animation:invest-arrive 560ms cubic-bezier(.22,1,.36,1) 80ms both}
-.hero-category-word{display:inline-block;animation:category-bloom 380ms cubic-bezier(.22,1,.36,1) both;animation-delay:calc(640ms + var(--word-order)*80ms)}
+.hero-master{animation:master-bloom 1200ms cubic-bezier(.25,.65,.3,1) both}
+.hero-invest{animation:invest-arrive 1000ms cubic-bezier(.22,.7,.36,1) 150ms both}
+.hero-category-word{display:inline-block;animation:category-bloom 600ms cubic-bezier(.22,.7,.36,1) both;animation-delay:calc(1200ms + var(--word-order)*160ms)}
 @keyframes master-bloom{
- 0%{opacity:0;clip-path:inset(-.5em 100% -.5em -.1em);filter:blur(3px);text-shadow:0 0 12px rgba(241,239,233,.25)}
- 45%{opacity:1}
- 100%{opacity:1;clip-path:inset(-.5em -.1em -.5em -.1em);filter:blur(0);text-shadow:none}
+ 0%{opacity:0;transform:translate3d(-100vw,0,0);filter:blur(4px);text-shadow:0 0 12px rgba(241,239,233,.25)}
+ 30%{opacity:.85}
+ 100%{opacity:1;transform:none;filter:blur(0);text-shadow:none}
 }
 @keyframes invest-arrive{
- 0%{opacity:0;transform:translate3d(0,-10px,0);filter:blur(3px);text-shadow:0 0 14px rgba(241,239,233,.25)}
- 55%{opacity:1;text-shadow:0 0 7px rgba(241,239,233,.12)}
+ 0%{opacity:0;transform:translate3d(0,-22px,0);filter:blur(4px);text-shadow:0 0 14px rgba(241,239,233,.25)}
+ 55%{opacity:.8;text-shadow:0 0 7px rgba(241,239,233,.12)}
  100%{opacity:1;transform:none;filter:blur(0);text-shadow:none}
 }
 @keyframes category-bloom{
