@@ -47,20 +47,22 @@ html[lang=el] .hero-kicker{letter-spacing:.04em}html[lang=el] .contact-title{fon
  100%{transform:translate3d(0,0,0) scale(1)}
 }
 /* Single static page texture: the existing tile is 50% alpha, yielding
-   about 2% baseline / 3% near the light. No filters, animation or extra layer.
+   about 2.5% baseline / 5% near the light. No filters, animation or extra layer.
    Top-layer dialogs/fullscreen retain their own grain above this overlay. */
-body::after{content:'';position:fixed;inset:0;z-index:10;pointer-events:none;background:url('../icons/film-grain.svg') repeat;opacity:.06;mask-image:radial-gradient(ellipse 550px 450px at var(--surface-x,60vw) var(--surface-y,40vh),#fff 0%,rgba(255,255,255,.85) 35%,rgba(255,255,255,.67) 100%)}
+body::after{content:'';position:fixed;inset:0;z-index:10;pointer-events:none;background:url('../icons/film-grain.svg') repeat;opacity:.10;mask-image:radial-gradient(ellipse 550px 450px at var(--surface-x,60vw) var(--surface-y,40vh),#fff 0%,rgba(255,255,255,.8) 35%,rgba(255,255,255,.5) 100%)}
 .hero-media::after{content:none}
-.optical-light{background:radial-gradient(ellipse at var(--pointer-x,60%) var(--pointer-y,40%),#d8c39b12 0%,#bdcbd509 22%,transparent 45%)}
+.optical-light{background:radial-gradient(ellipse at var(--pointer-x,60%) var(--pointer-y,40%),#d8c39b1b 0%,#bdcbd50f 22%,transparent 45%)}
 @media(max-width:760px){.hero-media>picture img{--hero-pan:5.5%}}
-@media(hover:none),(pointer:coarse),(prefers-reduced-motion:reduce){body::after{mask-image:none;opacity:.04}}
-.motion-paused body::after{mask-image:none;opacity:.04}
+@media(hover:none),(pointer:coarse),(prefers-reduced-motion:reduce){body::after{mask-image:none;opacity:.06}}
+.motion-paused body::after{mask-image:none;opacity:.06}
 /* One-time section illumination shares the reveal observer; no scroll handler. */
 .reveal-ready:is(h2,h3,p,li,address,.field,.contact-links,.venture-card,.destination-card){transition-duration:900ms}
 main>.section{position:relative}
-.section-illuminated::before{content:'';position:absolute;top:0;left:2%;right:2%;height:min(60vh,480px);pointer-events:none;z-index:1;background:radial-gradient(ellipse 48% 65% at 50% 35%,rgba(245,237,221,.7),rgba(245,237,221,.18) 45%,transparent 80%);opacity:0;animation:section-illumination 600ms cubic-bezier(.22,1,.36,1) both}
-@keyframes section-illumination{0%{opacity:0;transform:scale(.92)}35%{opacity:.055}100%{opacity:0;transform:scale(1.04)}}
+.section-illuminated::before{content:'';position:absolute;top:var(--bloom-top,0px);left:2%;right:2%;height:min(60vh,480px);pointer-events:none;z-index:1;background:radial-gradient(ellipse 48% 65% at 50% var(--bloom-y,35%),rgba(var(--section-light,245,237,221),.7),rgba(var(--section-light,245,237,221),.18) 45%,transparent 80%);opacity:0;animation:section-illumination 600ms cubic-bezier(.22,1,.36,1) both}
+@keyframes section-illumination{0%{opacity:0;transform:scale(.92)}35%{opacity:.11}100%{opacity:0;transform:scale(1.04)}}
 @media(max-width:760px){.section-illuminated::before{animation-name:section-illumination-mobile;transform:none}}
-@keyframes section-illumination-mobile{0%,100%{opacity:0}35%{opacity:.035}}
+@keyframes section-illumination-mobile{0%,100%{opacity:0}35%{opacity:.07}}
 @media(prefers-reduced-motion:reduce){.section-illuminated::before{display:none}}
 .motion-paused .section-illuminated::before{display:none}
+
+.light.section-illuminated{--section-light:130,113,82}

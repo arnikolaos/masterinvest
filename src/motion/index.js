@@ -19,8 +19,8 @@ export function initMotion(t) {
  reduced.addEventListener('change',refresh);document.addEventListener('visibilitychange',refresh);
  if(hero)new IntersectionObserver(([e])=>{heroVisible=e.isIntersecting;refresh();}).observe(hero);
  const observer=new IntersectionObserver(entries=>{
-  let stagger=0;for(const e of entries){if(e.isIntersecting){if(e.target.classList.contains('section')){e.target.classList.add('section-illuminated');observer.unobserve(e.target);continue;}e.target.style.transitionDelay=`${Math.min(stagger++,3)*100}ms`;e.target.classList.add('revealed');observer.unobserve(e.target);}}
- },{threshold:0.05});
+  let stagger=0;for(const e of entries){if(e.isIntersecting){if(e.target.classList.contains('section')){if(e.intersectionRect.height<Math.min(e.boundingClientRect.height*.1,innerHeight*.2))continue;const height=Math.min(innerHeight*.6,480);const center=e.intersectionRect.top-e.boundingClientRect.top+e.intersectionRect.height/2;const top=Math.max(0,Math.min(center-height/2,e.boundingClientRect.height-height));e.target.style.setProperty('--bloom-top',`${top}px`);e.target.style.setProperty('--bloom-y',`${center-top}px`);e.target.classList.add('section-illuminated');observer.unobserve(e.target);continue;}e.target.style.transitionDelay=`${Math.min(stagger++,3)*100}ms`;e.target.classList.add('revealed');observer.unobserve(e.target);}}
+ },{threshold:[0.05,0.1,0.2]});
  if(!reduced.matches)document.querySelectorAll('main > .section').forEach(section=>observer.observe(section));
  const candidates=document.querySelectorAll('main section:not(#hero) h2, main section:not(#hero) h3, main section:not(#hero) p, main section:not(#hero) picture, .destination-card, .venture-card, .lifecycle-steps li, .disciplines li, #contact .field, #contact address, #contact .contact-links');
  // Cards reveal as a unit; avoid stacking transforms on their children.
