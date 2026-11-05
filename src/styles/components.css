@@ -76,8 +76,9 @@ main>.section{position:relative}
 .hero-invest{animation:invest-arrive 1000ms cubic-bezier(.22,.7,.36,1) 150ms both}
 .hero-category-word{display:inline-block;animation:category-bloom 600ms cubic-bezier(.22,.7,.36,1) both;animation-delay:calc(1200ms + var(--word-order)*160ms)}
 @keyframes master-bloom{
- 0%{opacity:0;transform:translate3d(-100vw,0,0);filter:blur(4px);text-shadow:0 0 12px rgba(241,239,233,.25)}
- 30%{opacity:.85}
+ 0%{opacity:0;transform:translate3d(-100vw,0,0);filter:blur(6px);text-shadow:0 0 24px rgba(241,239,233,.35)}
+ 30%{opacity:.55;filter:blur(3px);text-shadow:0 0 20px rgba(241,239,233,.3)}
+ 65%{opacity:1;filter:blur(0);text-shadow:none}
  100%{opacity:1;transform:none;filter:blur(0);text-shadow:none}
 }
 @keyframes invest-arrive{
